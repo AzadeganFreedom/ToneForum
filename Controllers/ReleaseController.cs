@@ -33,11 +33,6 @@ namespace ToneForum.API.Controllers
             {
                 var newReleaseCreated = await releaseRepo.CreateRelease(release);
 
-                //foreach (var genre in newReleaseCreated.Genre_Id)
-                //{
-                //    var testing = await genreRepo.GetGenreById(genre);
-                    
-                //}
             }
             else // If it does exist, BadRequest
             {
