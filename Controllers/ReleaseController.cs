@@ -52,6 +52,14 @@ namespace ToneForum.API.Controllers
         //##############################################################################################################
 
         // Read: 
+        [HttpGet("GetAllReleases")] // Get all Releases
+        public async Task<IActionResult> GetAllReleases()
+        {
+            var allReleases = await releaseRepo.GetAllReleases();
+
+            return Ok(allReleases);
+        }
+
         [HttpGet("{id:int}")] // Get Release by Id
         public async Task<IActionResult> GetReleaseById(int id)
         {

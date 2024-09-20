@@ -45,6 +45,14 @@ namespace ToneForum.API.Controllers
         //##############################################################################################################
 
         // Read: 
+        [HttpGet("GetAllGenres")] // Get all Genres
+        public async Task<IActionResult> GetAllGenres()
+        {
+            var allGenres = await repo.GetAllGenres();
+
+            return Ok(allGenres);
+        }
+
         [HttpGet("{id:int}")] // Get Genre by Id
         public async Task<IActionResult> GetGenreById(int id)
         {

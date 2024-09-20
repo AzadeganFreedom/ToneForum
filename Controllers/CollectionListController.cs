@@ -1,15 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using ToneForum.Repository.Interfaces;
+using ToneForum.Repository.Models;
 
 namespace ToneForum.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class TypeController : ControllerBase
+    public class CollectionListController : ControllerBase
     {
-        private readonly ITypeRepository repo;
+        private readonly ICollectionListRepository repo;
 
-        public TypeController(ITypeRepository repo)
+        public CollectionListController(ICollectionListRepository repo)
         {
             this.repo = repo;
         }
