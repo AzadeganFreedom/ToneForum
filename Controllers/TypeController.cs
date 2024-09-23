@@ -20,6 +20,14 @@ namespace ToneForum.API.Controllers
 
         // Read:
 
+        [HttpGet("GetAllTypes")] // Get all types
+        public async Task<IActionResult> GetAllTypes()
+        {
+            var allTypes = await repo.GetAllTypes();
+
+            return Ok(allTypes);
+        }
+
         //##############################################################################################################
 
         // Update: 
